@@ -42,4 +42,8 @@
 <button bindtap="setPlain">点击设置以上按钮Plain属性</button>
 <button bindtap="setLoading">点击设置以上按钮Loading属性</button>
 
-
+<checkbox-group bindchange="checkboxChange">
+	<label class="checkbox" wx:for="{{items}}">
+		<checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+	</label>
+</checkbox-group>

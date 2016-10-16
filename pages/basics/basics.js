@@ -27,7 +27,17 @@ Page({
 		warnSize: 'warn',
 		disabled: false,
 		plain: false,
-		loading: false
+		loading: false,
+
+		//checkbox
+		items: [
+			{name: 'USA', value: '美国'},
+			{name: 'CHN', value: '中国', checked: 'true'},
+			{name: 'BRA', value: '巴西'},
+			{name: 'JPN', value: '日本'},
+			{name: 'ENG', value: '英国'},
+			{name: 'FRE', value: '法国'},
+		]
 	},
 
 	//text
@@ -61,5 +71,10 @@ Page({
 		this.setData({
 			loading: !this.data.loading
 		})
+	},
+
+	//checkbox
+	checkboxChange: function(e){
+		console.log('checkbox发送change事件，携带value值为：', e.detail.value)
 	}
 })
