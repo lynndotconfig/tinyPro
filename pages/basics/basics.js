@@ -76,5 +76,13 @@ Page({
 	//checkbox
 	checkboxChange: function(e){
 		console.log('checkbox发送change事件，携带value值为：', e.detail.value)
+	},
+
+	//form
+	formSubmit: function(e){
+		console.log("form发送了submit事件， 携带数据为：", e.detail.value)
+	},
+	formReset: function(e){
+		console.log("form发送了reset事件")
 	}
 })
