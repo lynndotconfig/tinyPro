@@ -115,3 +115,34 @@
 <view>
 	<input placeholder-style="color:read" placeholder="站位符字体是红色的" />
 </view>
+
+<view class="section section_gap">
+<view class="section__title">表单组件在label内</view>
+<checkbox-group class="group" bindchange="checkboxChange">
+	<view class="label-1" wx:for="{{checkboxItems}}">
+		<label>
+			<checkbox hidden value="{{item.name}}" checked="{{item.checked}}"/>
+			<view class="label-1__icon">
+				<view class="label-1__icon-checked" style="opacity:{{item.checked?1:0}}" />
+			</view>
+			<text class="label-1__text">{{item.value}}></text>
+		</label>
+	</view>
+</checkbox-group>
+</view>
+
+<view class="section section_gap">
+<view class="section__title">label用for标识表单组件</view>
+<radio-group class="group" bindchange="radioChange">
+	<view class="label-2" wx:for="{{radioItems}}">
+		<radio id="{{item.name}}" hidden value="{{item.name}}" checked="{{item.checked}}" />
+		<view class="label-2__icon">
+			<view class="label-2__icon-checked" style="opacity:{{item.checked?1:0}}"/>
+		</view>
+		<label class="label-2__text" for="{{item.name}}">
+			<text> {{item.name}} </text>
+		</label>
+	</view>
+</radio-group>
+</view>
+
